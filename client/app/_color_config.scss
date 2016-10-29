@@ -1,0 +1,19 @@
+// _config.scss
+$text-primary: #b1b1b1;
+$text-secondary: #fff;
+$text-tertiary: #808284;
+$color-primary: #b1b1b1;
+$color-secondary: #000;
+$color-shade-amount: 15%;
+$color-trans-amount: 0.5;
+$color-grey: #908E8E;
+$palette: ( primary: ( base: $color-primary, light: lighten($color-primary, $color-shade-amount), dark: darken($color-primary, $color-shade-amount), trans: transparentize($color-primary, $color-trans-amount)), secondary: ( base: $color-secondary, light: lighten($color-secondary, $color-shade-amount), dark: darken($color-secondary, $color-shade-amount), trans: transparentize($color-secondary, $color-trans-amount)));
+$colors: ( white: #FFF, black: #111111, lightGray: #F5F6F7, mediumGray: #999999, darkGray: #777777, blue: #69D2E7, lightBlue: #A7DBD8, lightOrange: #F38630, orange: #FA6900, orange-peach: #F9873A, green: #2ecc71, darkGreen: #27ae60, red: #e74c3c, darkRed: #c0392b, primary: #F9873A, //orange
+tertiary: #453744, primaryLinkColor: #537DBE, //blue
+headPrimary: #000, //orange
+textPrimary: #404041, textSecondary: #58585b, textTertiary: #808284, btnPrimary: #F9873A, //#FF4D41, // #dd6346, //#F16654,
+btnSecondary: #e5e5e5, inpPrimary: #e6e7e8, inpBorder: #5191cd, sidebarPrimary: #F9873A, //#453744, //purple
+sidebarSecondary: black, sidebarText: #fff, //rgba(255,255,255, 0.6),
+sidebarTextHover: #fff, //rgba(255,255,255, 1),
+sidebarHover: $color-primary, shadow: rgba(0, 0, 0, 0.1), shadowHover: #E88877, // rgba(0,0,0, 0.15),
+header: ( text: $text-secondary, bg: #000, linkHover: palette(primary), dropdownBg: #000, dropdownHoverBg: #F16654, dropdownHoverLink: #fff, dropdownDivider: #453744), home: ( primary: palette(primary), secondary: palette(secondary), sectionBg: #000, sopCardBg: #EAEAEA, sopBgLight: #FFF, sopBgMedium: #999999, sopBgDark: #777777, linkColor: $text-primary, textColor: $text-secondary, black: #FCb9b4));

@@ -1,0 +1,18 @@
+<div ng-include="'components/shell/shell.html'"></div>
+ <div ng-include="'components/navbar/navbar.html'"></div>
+<div class="things-list" md-cols-sm="1" md-cols-md="2" md-cols-gt-md="5"
+        md-row-height-gt-md="1:1" md-row-height="4:3"
+        md-gutter="8px" md-gutter-gt-sm="4px">
+  <div ng-repeat="thing in awesomeThings" ng-class="getColor($index)" md-rowspan="{{getSpan($index)}}"
+                  md-colspan="{{getSpan($index)}}"
+                  md-colspan-sm="1">
+    
+    <md-button aria-label="Remove item" class="md-icon-button delete-btn" ng-click="deleteThing(thing)">
+      <md-icon style="fill: #fff" md-svg-icon="action:delete"></md-icon>
+    </md-button>
+    
+    <md-icon class="avatar-icon" md-svg-icon="avatar:svg-{{ ($index + 1) % 11 }}"></md-icon>
+    <div><h3>{{thing.name}}</h3></div>
+  </div>
+</duv>
+<div ng-include="components/footer/footer.html" ></div>

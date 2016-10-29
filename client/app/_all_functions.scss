@@ -1,0 +1,60 @@
+// _functions.scss
+@function palette($key, $variant: base) {
+    @return map-get(map-get($palette, $key), $variant);
+    @warn "Unknown `#{$key}` in $colors.";
+}
+
+@function color($key, $value: null) {
+    @if map-has-key($colors, $key) and $value==null {
+        @return map-get($colors, $key);
+    }
+    @if map-has-key($colors, $key) and $value !=null {
+        @return map-get(map-get($colors, $key), $value);
+    }
+    @warn "Unknown `#{$key}` in $colors.";
+    @return null;
+}
+
+@function fs($key) {
+    @if map-has-key($fs, $key) {
+        @return map-get($fs, $key);
+    }
+    @warn "Unknown `#{$key}` in $fs.";
+    @return null;
+}
+
+@function breakpoint($key) {
+    $min: map-get(map-get($breakpoints, $key), "min");
+    $max: map-get(map-get($breakpoints, $key), "max");
+    @return "(min-width: #{$min}) and (max-width: #{$max})";
+    @warn "Unknown `#{$key}` in $breakpoints";
+}
+
+@mixin square($size) {
+    width: $size;
+    height: $size;
+}
+
+@mixin transition($duration) {
+    transition: all $duration ease;
+}
+
+@mixin full-height($adj) {
+    min-height: calc(100vh - #{$adj});
+}
+
+@mixin setBgColorAndHover($baseColor, $percent: 0) {
+    background-color: $baseColor;
+    &:hover {
+        background-color: darken($baseColor, $percent);
+    }
+}
+
+@mixin removeAnchorStyle($color: black) {
+    a {
+        color: $color;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}

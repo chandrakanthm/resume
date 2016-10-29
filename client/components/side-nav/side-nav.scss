@@ -1,0 +1,39 @@
+#sidenav {
+    border-right: 0.06px solid $color-primary;
+    max-width: 15rem;
+    padding-right: 0px;
+    margin-top: 0rem;
+    .navi {
+        li {
+            text-decoration: none;
+            list-style: none;
+            color: $color-primary;
+            margin-bottom: 4rem !important;
+            a {
+                padding: 2rem;
+                text-decoration: none;
+                cursor: pointer;
+                color: $color-primary;
+                max-width: 10rem !important;
+                &:hover {
+                    cursor: pointer;
+                    color: $color-primary;
+                    background-color: darken($color-primary, 10);
+                }
+            }
+        }
+    }
+    .nav {
+        li {
+            margin-bottom: 2rem !important;
+            a {
+                color: $color-primary;
+                &:hover {
+                    cursor: pointer;
+                    color: white;
+                    background-color: $color-primary;
+                }
+            }
+        }
+    }
+}
