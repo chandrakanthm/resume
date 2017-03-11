@@ -7,6 +7,12 @@ angular.module('resumeApp')
                 url: '/',
                 templateUrl: 'app/me/me.html',
 
+            })
+            .state('resume', {
+                url: '/resume',
+                templateUrl: 'app/me/planet.html',
+                controller: 'ctrl1'
+
             });
 
     });
